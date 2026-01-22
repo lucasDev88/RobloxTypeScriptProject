@@ -1,6 +1,6 @@
 export interface GameModule {
 	Name: string;
-	Priotity?: number;
+	Priority?: number;
 	Init(): void;
-	Start?: void;
+	Start?: () => void;
 }
