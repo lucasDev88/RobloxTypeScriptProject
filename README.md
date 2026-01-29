@@ -18,6 +18,21 @@ focada em organização, modularidade e escalabilidade.
 
 <hr>
 
+<h2>📱 Funcionalidades inclusas</h2>
+<ul>
+  <li><b>Leaderstats</b> — Sistema básico de leaderstats</li>
+  <li><b>Run</b> — Sistema básico de corrida</li>
+</ul>
+
+<h2>📲 Funcionalidades para os futuros updates</h2>
+
+<ul>
+  <li><b>ProfileService</b> — Criação de um DataStore utilizando o Profile Service estilo profissional</li>
+  <li><b>Roact</b> — Criação de um sistema de GUI personalisado com <strong>tipagens</strong> utilizando Roact</li>
+</ul>
+
+<hr>
+
 <h2>📁 Estrutura do Projeto</h2>
 
 <pre>
