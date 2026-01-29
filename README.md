@@ -40,6 +40,18 @@ src/
 
 <p>O projeto conta com o Wally, biblioteca para os serviços do roblox como NetworkService, o próprio Profile Service e entre outros.</p>
 
+<h3>Como adicionar outras Packages:</h3>
+
+<p>Primeiro, entre no link do site do <a href="https://wally.run">Wally</a> após isso escolha o package e copie o código, geralmente o código vem com esse modelo:</p>
+
+<pre><code>nomedapackage="nomedoautor/repositório@versão"</code></pre>
+
+<p>Em seguida abra o arquivo <pre>wally.toml</pre> e coloque o código copiado depois da linha que contém <code>[dependencies]</code> e finalmente rode o comando:</p>
+
+<pre><code>wally install</code></pre>
+
+<p>E pronto, sua package já está no jogo</p>
+
 <hr>
 
 <h2>🧠 Sistema de Módulos</h2>
