@@ -46,7 +46,7 @@ src/
 
 <pre><code>nomedapackage="nomedoautor/repositório@versão"</code></pre>
 
-<p>Em seguida abra o arquivo <pre>wally.toml</pre> e coloque o código copiado depois da linha que contém <code>[dependencies]</code> e finalmente rode o comando:</p>
+<p>Em seguida abra o arquivo <pre>wally.toml</pre> e coloque o código copiado depois da linha que contém <code>[dependencies]</code> porém se sua package for uma package de server, então precisará adicionar a seguinte linha de código: <code>[server-dependices]</code> adicione o link logo em seguida e finalmente rode o comando:</p>
 
 <pre><code>wally install</code></pre>
 
