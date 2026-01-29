@@ -3,9 +3,14 @@
 registry = "test"
 
 [[package]]
+name = "alreadypro/profileservice"
+version = "1.0.4"
+dependencies = []
+
+[[package]]
 name = "dell/test"
 version = "0.1.0"
-dependencies = [["Roact", "jessekroeske/roact@1.4.2"]]
+dependencies = [["Roact", "jessekroeske/roact@1.4.2"], ["ProfileService", "alreadypro/profileservice@1.0.4"]]
 
 [[package]]
 name = "jessekroeske/roact"

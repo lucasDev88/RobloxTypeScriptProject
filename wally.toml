@@ -6,3 +6,6 @@ realm = "shared"
 
 [dependencies]
 Roact = "jessekroeske/roact@1.4.2"
+
+[server-dependencies]
+ProfileService = "alreadypro/profileservice@1.0.4"

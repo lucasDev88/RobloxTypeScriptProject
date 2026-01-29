@@ -1,13 +1,13 @@
 import { TagHandler } from "shared/Types/TagHandler";
 import { Players } from "@rbxts/services";
 
-const Coins: TagHandler = {
-	Tag: "Coins",
+const Gems: TagHandler = {
+	Tag: "Gems",
 
 	Init(instance) {
 		if (!instance.IsA("BasePart")) return;
 
-		let collected = false; // 🔒 trava
+		let collected = false;
 
 		instance.Touched.Connect((hit) => {
 			if (collected) return;
@@ -22,11 +22,11 @@ const Coins: TagHandler = {
 			if (!player) return;
 
 			const leaderstats = player.FindFirstChild("leaderstats");
-			const coins = leaderstats?.FindFirstChild("Coins");
+			const gems = leaderstats?.FindFirstChild("Gems");
 
-			if (coins && coins.IsA("IntValue")) {
-				collected = true; // 🔒 impede múltiplas execuções
-				coins.Value += 10;
+			if (gems && gems.IsA("IntValue")) {
+				collected = true;
+				gems.Value += 1;
 
 				instance.Destroy();
 			}
@@ -34,4 +34,4 @@ const Coins: TagHandler = {
 	},
 };
 
-export default Coins;
+export default Gems;

@@ -8,7 +8,10 @@
 		"$className": "DataModel",
 		"ServerScriptService": {
 			"$className": "ServerScriptService",
-			"$path": "out/server"
+			"$path": "out/server",
+			"Packages": {
+				"$path": "src/server/ServerPackages"
+			}
 		},
 		"ReplicatedStorage": {
 			"$className": "ReplicatedStorage",
