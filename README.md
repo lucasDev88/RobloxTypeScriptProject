@@ -105,8 +105,7 @@ src/
 
 <h3>Exemplo de Tag Handler</h3>
 
-<pre><code>
-  import TagHandler from "shared/Types/TagHandler.ts"
+<pre><code>import TagHandler from "shared/Types/TagHandler.ts"
   
   const Coins: TagHandler = {
     Tag: "Coins",
