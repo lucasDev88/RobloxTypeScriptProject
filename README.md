@@ -12,6 +12,7 @@ focada em organização, modularidade e escalabilidade.
   <li><b>roblox-ts</b> — TypeScript para Roblox</li>
   <li><b>@rbxts/services</b> — Acesso tipado aos serviços do Roblox</li>
   <li><b>ProfileService (Lua)</b> — Sistema robusto de DataStore</li>
+  <li><b>Roact (Lua)</b> — Sistema de GUI anvançada implementada em breve</li>
   <li><b>ESLint + Prettier</b> — Padronização de código</li>
 </ul>
 
@@ -22,16 +23,14 @@ focada em organização, modularidade e escalabilidade.
 <pre>
 src/
 │
-├── client/            → Scripts do lado do jogador
+├── client/            → Scripts do lado do jogador com module loader e uma funcionalidade de RUN
 ├── server/            → Lógica do servidor
 │   ├── Services/      → Sistemas principais do jogo
 │   ├── Modules/       → Módulos organizados por função
-│   └── Loader.ts      → Carregador automático de módulos
-│
-├── shared/            → Tipos e código compartilhado
-│   └── Types/
-│
-└── index.server.ts    → Ponto inicial do servidor
+│   └── main.server.ts → Index do servidor
+│                      
+├── shared/            → Scripts compartilhados
+│   └── Types/         → Tipos como o GameModule e o TagHandler
 </pre>
 
 <hr>
@@ -68,6 +67,12 @@ src/
 }
 </code></pre>
 
+<pre><code>export interface TagHandler {
+  Tag: string:
+  Init(instance: Instance): void | string;
+}
+</code></pre>
+
 <h3>Ordem de execução</h3>
 
 <ol>
@@ -75,7 +80,7 @@ src/
   <li><code>Start()</code> de todos os módulos</li>
 </ol>
 
-<pre><code>modules.sort((a, b) => (a.Priority ?? 100) &lt; (b.Priority ?? 100));</code></pre>
+<pre><code>DEPRECATED: modules.sort((a, b) => (a.Priority ?? 100) &lt; (b.Priority ?? 100));</code></pre>
 
 <hr>
 
@@ -85,7 +90,10 @@ src/
 
 <h3>Exemplo de Tag Handler</h3>
 
-<pre><code>const Coins: TagHandler = {
+<pre><code>
+  import TagHandler from "shared/Types/TagHandler.ts"
+  
+  const Coins: TagHandler = {
     Tag: "Coins",
 
     Init(instance) {
@@ -111,7 +119,7 @@ Basta:
 
 <hr>
 
-<h2>💾 Sistema de Dados (ProfileService)</h2>
+<h2>DEPRECATED: 💾 Sistema de Dados (ProfileService)</h2>
 
 <p>Os dados do jogador são carregados ao entrar e salvos ao sair.</p>
 
