@@ -36,6 +36,12 @@ src/
 
 <hr>
 
+<h2>🐶 Wally</h2>
+
+<p>O projeto conta com o Wally, biblioteca para os serviços do roblox como NetworkService, o próprio Profile Service e entre outros.</p>
+
+<hr>
+
 <h2>🧠 Sistema de Módulos</h2>
 
 <p>O projeto usa um <b>Module Loader</b>, onde cada sistema do jogo é um módulo com prioridade.</p>
