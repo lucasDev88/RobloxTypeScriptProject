@@ -82,12 +82,6 @@ src/
 }
 </code></pre>
 
-<pre><code>export interface TagHandler {
-  Tag: string:
-  Init(instance: Instance): void | string;
-}
-</code></pre>
-
 <h3>Ordem de execução</h3>
 
 <ol>
@@ -102,6 +96,14 @@ src/
 <h2>🏷️ Sistema de Tags (CollectionService)</h2>
 
 <p>Existe um <b>TagHandler</b> que detecta objetos com tags e executa scripts automaticamente.</p>
+
+<h3>Interface padrão de Tags</h3>
+
+<pre><code>export interface TagHandler {
+  Tag: string:
+  Init(instance: Instance): void | string;
+}
+</code></pre>
 
 <h3>Exemplo de Tag Handler</h3>
 
