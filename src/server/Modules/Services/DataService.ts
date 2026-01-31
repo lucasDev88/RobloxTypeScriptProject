@@ -1,7 +1,7 @@
-import ProfileService, { Profile } from "server/ServerPackages/ProfileService";
+import ProfileService, { Profile } from "../../ServerPackages/ProfileService";
 import { Players } from "@rbxts/services";
-import { GameModule } from "shared/Types/GameModule";
-import { PlayerData } from "shared/Types/PlayerData";
+import { GameModule } from "../../../shared/Types/GameModule";
+import { PlayerData } from "../../../shared/Types/PlayerData";
 
 const ProfileStore = ProfileService.GetProfileStore(
 	"PlayerData_V1", // muda versão quando resetar dados

@@ -1,4 +1,4 @@
-import { GameModule } from "shared/Types/GameModule";
+import { GameModule } from "../../../shared/Types/GameModule";
 import { CollectionService, Players } from "@rbxts/services";
 import { TagHandlers } from "./Tags/Handler";
 

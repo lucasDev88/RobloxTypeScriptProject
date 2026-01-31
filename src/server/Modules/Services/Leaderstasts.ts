@@ -1,6 +1,6 @@
 import { Players } from "@rbxts/services";
 import { Profiles } from "./DataService";
-import { GameModule } from "shared/Types/GameModule";
+import { GameModule } from "../../../shared/Types/GameModule";
 
 const Leaderstats: GameModule = {
 	Name: "Leaderstats",

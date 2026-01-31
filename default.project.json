@@ -10,7 +10,7 @@
 			"$className": "ServerScriptService",
 			"$path": "out/server",
 			"Packages": {
-				"$path": "src/server/ServerPackages"
+				"$path": "out/server/ServerPackages"
 			}
 		},
 		"ReplicatedStorage": {

@@ -1,4 +1,4 @@
-import { GameModule } from "shared/Types/GameModule";
+import { GameModule } from "../../../shared/Types/GameModule";
 import { Players, UserInputService } from "@rbxts/services";
 
 const Test: GameModule = {

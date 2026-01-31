@@ -1,4 +1,4 @@
-import { TagHandler } from "shared/Types/TagHandler";
+import { TagHandler } from "../../../../shared/Types/TagHandler";
 import { Players } from "@rbxts/services";
 
 const Gems: TagHandler = {

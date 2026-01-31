@@ -1,4 +1,4 @@
-declare module "server/ServerPackages/ProfileService" {
+declare module "../../ServerPackages/ProfileService" {
 	export interface Profile<Data = unknown> {
 		Data: Data;
 		Reconcile(): void;

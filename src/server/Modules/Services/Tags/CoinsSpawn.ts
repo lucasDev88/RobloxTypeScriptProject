@@ -1,4 +1,4 @@
-import { TagHandler } from "shared/Types/TagHandler";
+import { TagHandler } from "../../../../shared/Types/TagHandler";
 import { ServerStorage, Workspace } from "@rbxts/services";
 
 const CoinsSpawn: TagHandler = {

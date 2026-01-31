@@ -1,22 +1,36 @@
+import { GameModule } from "../../shared/Types/GameModule";
 import ClientModules from "./ClientModules";
-import { GameModule } from "shared/Types/GameModule";
 
 export default class ModuleLoader {
 	static Load() {
-		const modules = [...ClientModules];
+		const modules = ClientModules as GameModule[];
 
-		modules.sort((a: GameModule, b: GameModule): boolean => {
+		modules.sort((a, b) => {
 			return (a.Priority ?? 100) < (b.Priority ?? 100);
 		});
 
 		for (const mod of modules) {
-			mod.Init();
+			const [success, err] = pcall(() => {
+				print(`🔧 Init módulo: ${mod.Name}`);
+				mod.Init?.();
+			});
+
+			if (!success) {
+				warn(`❌ Erro no Init do módulo ${mod.Name}:`, err);
+			}
 		}
 
 		for (const mod of modules) {
-			mod.Start?.();
+			const [success, err] = pcall(() => {
+				print(`🚀 Start módulo: ${mod.Name}`);
+				mod.Start?.();
+			});
+
+			if (!success) {
+				warn(`❌ Erro no Start do módulo ${mod.Name}:`, err);
+			}
 		}
 
-		print("Modulos do client carregados com sucesso");
+		print("Modulos do servidor carregados com sucesso");
 	}
 }
