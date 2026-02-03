@@ -82,6 +82,18 @@ src/
 }
 </code></pre>
 
+<h3>Adicionar modulos ao Loader</h3>
+
+<p>Existe 2 arquivos cujos papéis de enviar o módulo para que seja carregado.</p>
+<br>
+<p><code>ModulesServer.ts</code> Basta adicionar o Import do módulo na linha:</p>
+
+<pre><code>const ServerModules: GameModule[] = [Leaderstats, TagHandler, /* DataService, */ PlayerMultiplier];</code></pre>
+
+<p><code>ClientModules.ts</code> Basta adicionar o import do módulo client na linha:</p>
+
+<pre><code>const ClientModules: GameModule[] = [Test];</code></pre>
+
 <h3>Ordem de execução</h3>
 
 <ol>
@@ -89,7 +101,7 @@ src/
   <li><code>Start()</code> de todos os módulos</li>
 </ol>
 
-<pre><code>DEPRECATED: modules.sort((a, b) => (a.Priority ?? 100) &lt; (b.Priority ?? 100));</code></pre>
+<pre><code>modules.sort((a, b) => (a.Priority ?? 100) &lt; (b.Priority ?? 100));</code></pre>
 
 <hr>
 
@@ -100,7 +112,7 @@ src/
 <h3>Interface padrão de Tags</h3>
 
 <pre><code>export interface TagHandler {
-  Tag: string:
+  Tag: string;
   Init(instance: Instance): void | string;
 }
 </code></pre>
@@ -109,14 +121,14 @@ src/
 
 <pre><code>import TagHandler from "shared/Types/TagHandler.ts"
   
-  const Coins: TagHandler = {
-    Tag: "Coins",
+const Nome: TagHandler = {
+    Tag: "TagName",
 
     Init(instance) {
         if (!instance.IsA("BasePart")) return;
 
         instance.Touched.Connect((hit) => {
-            // lógica da moeda
+            // lógica
         });
     },
 };
